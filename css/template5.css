@@ -1,0 +1,311 @@
+/* Template 5: Artisan Portfolio */
+
+:root {
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+body {
+    padding-top: 50px;
+    font-family: var(--font-body);
+}
+
+/* Gallery Hero */
+.gallery-hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-slider {
+    height: 100%;
+}
+
+.slide {
+    height: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--color-light);
+    z-index: 2;
+}
+
+.slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.3);
+}
+
+.slide-content h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+}
+
+.slide-content p {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-light);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Portfolio Categories */
+.portfolio-categories {
+    padding: 4rem 0;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+}
+
+.category-item {
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.category-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.category-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+    color: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.category-item:hover .category-overlay {
+    opacity: 1;
+}
+
+.category-item:hover img {
+    transform: scale(1.05);
+}
+
+.category-overlay h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+}
+
+/* Featured Work */
+.featured-work {
+    padding: 4rem 0;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+}
+
+.work-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.work-item.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.work-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.work-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: var(--color-light);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.work-item:hover .work-details {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.work-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Artist Statement */
+.artist-statement {
+    padding: 8rem 0;
+    background: var(--color-secondary);
+    text-align: center;
+}
+
+.statement-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.statement-text {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin: 2rem 0;
+}
+
+/* Instagram Showcase */
+.instagram-showcase {
+    padding: 4rem 0;
+}
+
+.instagram-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.instagram-handle {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--color-accent);
+    text-decoration: none;
+    margin-top: 0.5rem;
+}
+
+.instagram-wall {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+}
+
+.insta-item {
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.insta-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.insta-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Contact Overlay */
+.contact-overlay {
+    padding: 8rem 0;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('../images/contact-bg.jpg') center/cover no-repeat;
+    color: var(--color-light);
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-content h2 {
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+}
+
+.contact-content p {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .work-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .instagram-wall {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .slide-content h1 {
+        font-size: 3rem;
+    }
+    
+    .statement-text {
+        font-size: 1.4rem;
+    }
+    
+    .work-item.large {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+@media (max-width: 576px) {
+    .category-grid,
+    .work-grid,
+    .instagram-wall {
+        grid-template-columns: 1fr;
+    }
+    
+    .slide-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .category-overlay h2 {
+        font-size: 1.5rem;
+    }
+}
