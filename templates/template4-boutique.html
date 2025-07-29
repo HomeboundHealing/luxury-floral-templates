@@ -6,12 +6,184 @@
     <title>Boutique Studio - Floral Design Template</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/template4.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="preview-banner">
         <p>Template Preview - Boutique Studio</p>
         <a href="../index.html" class="preview-back">← Back to Templates</a>
     </div>
-    <p style="text-align: center; padding: 50px;">Template 4 - Boutique Studio content will be displayed here</p>
+
+    <header class="boutique-hero">
+        <div class="hero-content">
+            <h1>Bespoke Floral Services</h1>
+            <p class="tagline">Elevating moments through artisanal floral design</p>
+            <div class="hero-cta">
+                <a href="#services" class="btn-primary">View Services</a>
+                <a href="#booking" class="btn-secondary">Book Consultation</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="services" class="service-packages section">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="packages-grid">
+                    <div class="package-card premium">
+                        <div class="package-header">
+                            <h3>Signature Wedding</h3>
+                            <p class="price">Starting at $5,000</p>
+                        </div>
+                        <div class="package-content">
+                            <ul class="package-features">
+                                <li>Personal Design Consultation</li>
+                                <li>Bridal Party Flowers</li>
+                                <li>Ceremony & Reception Design</li>
+                                <li>Custom Installations</li>
+                                <li>Setup & Breakdown Service</li>
+                                <li>Venue Visit & Planning</li>
+                            </ul>
+                            <a href="#booking" class="btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="package-card">
+                        <div class="package-header">
+                            <h3>Event Design</h3>
+                            <p class="price">Starting at $2,500</p>
+                        </div>
+                        <div class="package-content">
+                            <ul class="package-features">
+                                <li>Design Consultation</li>
+                                <li>Custom Arrangements</li>
+                                <li>Event Space Styling</li>
+                                <li>Installation & Removal</li>
+                                <li>Event Day Coordination</li>
+                            </ul>
+                            <a href="#booking" class="btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="package-card">
+                        <div class="package-header">
+                            <h3>Seasonal Subscription</h3>
+                            <p class="price">From $200/month</p>
+                        </div>
+                        <div class="package-content">
+                            <ul class="package-features">
+                                <li>Weekly/Monthly Deliveries</li>
+                                <li>Seasonal Blooms</li>
+                                <li>Custom Vessel Selection</li>
+                                <li>Arrangement Style Choice</li>
+                                <li>Flexible Scheduling</li>
+                            </ul>
+                            <a href="#booking" class="btn-primary">Subscribe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="booking" class="booking-system section">
+            <div class="container">
+                <div class="booking-grid">
+                    <div class="booking-info">
+                        <h2>Book Your Consultation</h2>
+                        <p class="lead">Let's discuss your vision and create something extraordinary together.</p>
+                        <div class="consultation-details">
+                            <div class="detail-item">
+                                <h4>Duration</h4>
+                                <p>60 minutes</p>
+                            </div>
+                            <div class="detail-item">
+                                <h4>Location</h4>
+                                <p>Studio or Virtual</p>
+                            </div>
+                            <div class="detail-item">
+                                <h4>Investment</h4>
+                                <p>Complimentary</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="booking-form">
+                        <div class="form-grid">
+                            <input type="text" placeholder="Name" required>
+                            <input type="email" placeholder="Email" required>
+                            <input type="tel" placeholder="Phone" required>
+                            <select required>
+                                <option value="">Select Service</option>
+                                <option value="wedding">Wedding Design</option>
+                                <option value="event">Event Design</option>
+                                <option value="subscription">Subscription</option>
+                            </select>
+                            <input type="date" placeholder="Preferred Date" required>
+                            <select required>
+                                <option value="">Preferred Time</option>
+                                <option value="morning">Morning</option>
+                                <option value="afternoon">Afternoon</option>
+                            </select>
+                            <textarea placeholder="Tell us about your vision" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Request Consultation</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="process-section">
+            <div class="container">
+                <h2>Our Process</h2>
+                <div class="process-grid">
+                    <div class="process-step">
+                        <span class="step-number">01</span>
+                        <h3>Consultation</h3>
+                        <p>We begin with an in-depth discussion of your vision, style, and requirements.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-number">02</span>
+                        <h3>Design</h3>
+                        <p>Our team creates a detailed proposal including mood boards and flower selections.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-number">03</span>
+                        <h3>Refinement</h3>
+                        <p>We refine the design based on your feedback until it's perfect.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-number">04</span>
+                        <h3>Creation</h3>
+                        <p>Our artisans bring your vision to life with meticulous attention to detail.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>studio@floraluxe.com</p>
+                <p>+1 (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">Instagram</a>
+                    <a href="#" aria-label="Pinterest">Pinterest</a>
+                    <a href="#" aria-label="Facebook">Facebook</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Studio</h3>
+                <p>123 Blossom Street</p>
+                <p>New York, NY 10001</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Flora Luxe. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
