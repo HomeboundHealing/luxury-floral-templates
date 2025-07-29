@@ -89,11 +89,6 @@
             background: var(--color-text);
         }
 
-        .btn.disabled {
-            background: #ccc;
-            cursor: not-allowed;
-        }
-
         .status-badge {
             position: absolute;
             top: 10px;
@@ -101,16 +96,8 @@
             padding: 4px 8px;
             border-radius: 12px;
             font-size: 0.8rem;
-        }
-
-        .status-ready {
             background: #e8f5e9;
             color: #2e7d32;
-        }
-
-        .status-coming {
-            background: #fff3e0;
-            color: #ef6c00;
         }
 
         footer {
@@ -120,6 +107,12 @@
             border-top: 1px solid var(--color-primary);
             color: var(--color-text);
             opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .template-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -132,38 +125,38 @@
 
         <div class="template-grid">
             <div class="template-card">
-                <span class="status-badge status-ready">Ready to Preview</span>
+                <span class="status-badge">Ready to Preview</span>
                 <h2>Classic Elegance</h2>
                 <p>Minimalist design with large hero images, perfect for traditional luxury brands.</p>
                 <a href="templates/template1-classic.html" class="btn">View Template</a>
             </div>
 
             <div class="template-card">
-                <span class="status-badge status-coming">Coming Soon</span>
+                <span class="status-badge">Ready to Preview</span>
                 <h2>Modern Romantic</h2>
                 <p>Gallery-focused layout with enhanced testimonials, ideal for wedding florists.</p>
-                <a href="#" class="btn disabled">In Development</a>
+                <a href="templates/template2-romantic.html" class="btn">View Template</a>
             </div>
 
             <div class="template-card">
-                <span class="status-badge status-coming">Coming Soon</span>
+                <span class="status-badge">Ready to Preview</span>
                 <h2>Luxury Editorial</h2>
                 <p>Blog-centric design with sophisticated typography for sharing floral stories.</p>
-                <a href="#" class="btn disabled">In Development</a>
+                <a href="templates/template3-editorial.html" class="btn">View Template</a>
             </div>
 
             <div class="template-card">
-                <span class="status-badge status-coming">Coming Soon</span>
+                <span class="status-badge">Ready to Preview</span>
                 <h2>Boutique Studio</h2>
                 <p>Service packages and booking focus for client-centered businesses.</p>
-                <a href="#" class="btn disabled">In Development</a>
+                <a href="templates/template4-boutique.html" class="btn">View Template</a>
             </div>
 
             <div class="template-card">
-                <span class="status-badge status-coming">Coming Soon</span>
+                <span class="status-badge">Ready to Preview</span>
                 <h2>Artisan Portfolio</h2>
                 <p>Showcase-style with immersive imagery for artistic floral designers.</p>
-                <a href="#" class="btn disabled">In Development</a>
+                <a href="templates/template5-artisan.html" class="btn">View Template</a>
             </div>
         </div>
 
