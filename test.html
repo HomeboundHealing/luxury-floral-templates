@@ -11,35 +11,51 @@
             margin: 40px auto;
             padding: 20px;
             text-align: center;
+            line-height: 1.6;
         }
         h1 {
             color: #8B6F65;
+            margin-bottom: 1rem;
         }
         .test-links {
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            margin-top: 20px;
+            gap: 15px;
+            margin-top: 30px;
         }
         a {
             color: #8B6F65;
             text-decoration: none;
+            padding: 10px;
+            border: 1px solid #8B6F65;
+            border-radius: 4px;
+            transition: all 0.3s ease;
         }
         a:hover {
-            text-decoration: underline;
+            background: #8B6F65;
+            color: white;
+        }
+        .status {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f0f0f0;
+            border-radius: 4px;
         }
     </style>
 </head>
 <body>
-    <h1>Test Page - Floral Templates</h1>
-    <p>If you can see this page, the deployment is working!</p>
+    <h1>Floral Templates Test Page</h1>
+    <p>This is a test page to verify the Netlify deployment.</p>
+    <div class="status">
+        <strong>Current Status:</strong> Testing deployment configuration
+    </div>
     <div class="test-links">
-        <a href="/index.html">Go to Home</a>
-        <a href="/template1-classic.html">Template 1 - Classic</a>
-        <a href="/template2-romantic.html">Template 2 - Romantic</a>
-        <a href="/template3-editorial.html">Template 3 - Editorial</a>
-        <a href="/template4-boutique.html">Template 4 - Boutique</a>
-        <a href="/template5-artisan.html">Template 5 - Artisan</a>
+        <a href="/">Home Page</a>
+        <a href="/templates/template1-classic.html">Template 1 - Classic Elegance</a>
+        <a href="/templates/template2-romantic.html">Template 2 - Modern Romantic</a>
+        <a href="/templates/template3-editorial.html">Template 3 - Luxury Editorial</a>
+        <a href="/templates/template4-boutique.html">Template 4 - Boutique Studio</a>
+        <a href="/templates/template5-artisan.html">Template 5 - Artisan Portfolio</a>
     </div>
 </body>
 </html>
