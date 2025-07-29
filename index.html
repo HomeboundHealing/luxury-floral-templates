@@ -4,114 +4,176 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luxury Floral Design Templates</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         :root {
             --color-primary: #D4B8B3;
             --color-accent: #8B6F65;
             --color-text: #2C2C2C;
-            --color-bg: #F5E6E0;
+            --color-bg: #FAF6F4;
+            --color-light: #FFFFFF;
+            --font-heading: 'Cormorant Garamond', serif;
+            --font-body: 'Montserrat', sans-serif;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
+            --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+            --radius-sm: 2px;
+            --radius-md: 4px;
+            --radius-lg: 8px;
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: var(--font-body);
             margin: 0;
             padding: 0;
             background: var(--color-bg);
             color: var(--color-text);
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 60px 20px;
         }
 
         header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 60px;
+            padding: 40px 0;
+            background: linear-gradient(to bottom, var(--color-bg), transparent);
         }
 
         h1 {
+            font-family: var(--font-heading);
             color: var(--color-accent);
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            margin: 0 0 20px 0;
+            line-height: 1.2;
+            font-weight: 500;
         }
 
         .description {
             font-size: 1.2rem;
-            margin-bottom: 2rem;
+            margin: 0 auto 40px;
+            max-width: 600px;
             color: var(--color-text);
+            opacity: 0.9;
         }
 
         .template-grid {
             display: grid;
-            gap: 20px;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         }
 
         .template-card {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            background: var(--color-light);
+            padding: 30px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
             position: relative;
+            overflow: hidden;
+        }
+
+        .template-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--color-accent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .template-card:hover {
             transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .template-card:hover::before {
+            opacity: 1;
         }
 
         .template-card h2 {
+            font-family: var(--font-heading);
             color: var(--color-accent);
-            margin: 0 0 10px 0;
-            font-size: 1.5rem;
+            margin: 0 0 15px 0;
+            font-size: 1.8rem;
+            font-weight: 500;
         }
 
         .template-card p {
-            margin: 0 0 20px 0;
+            margin: 0 0 25px 0;
             color: var(--color-text);
-            opacity: 0.8;
+            opacity: 0.9;
+            line-height: 1.6;
         }
 
         .btn {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 12px 24px;
             background: var(--color-accent);
-            color: white;
+            color: var(--color-light);
             text-decoration: none;
-            border-radius: 4px;
-            transition: background 0.3s ease;
+            border-radius: var(--radius-sm);
+            transition: all 0.3s ease;
+            font-weight: 500;
+            letter-spacing: 0.5px;
         }
 
         .btn:hover {
             background: var(--color-text);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
         }
 
         .status-badge {
             position: absolute;
-            top: 10px;
-            right: 10px;
-            padding: 4px 8px;
-            border-radius: 12px;
+            top: 15px;
+            right: 15px;
+            padding: 6px 12px;
+            border-radius: 20px;
             font-size: 0.8rem;
-            background: #e8f5e9;
-            color: #2e7d32;
+            background: #E8F5E9;
+            color: #2E7D32;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            box-shadow: var(--shadow-sm);
         }
 
         footer {
             text-align: center;
-            margin-top: 60px;
-            padding-top: 20px;
+            margin-top: 80px;
+            padding-top: 30px;
             border-top: 1px solid var(--color-primary);
             color: var(--color-text);
             opacity: 0.8;
+            font-size: 0.9rem;
         }
 
         @media (max-width: 768px) {
+            .container {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 2.8rem;
+            }
+
             .template-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .template-card {
+                padding: 25px;
             }
         }
     </style>
@@ -120,42 +182,42 @@
     <div class="container">
         <header>
             <h1>Luxury Floral Design Templates</h1>
-            <p class="description">A collection of professional website templates for floral design studios</p>
+            <p class="description">A curated collection of professional website templates crafted specifically for floral design studios and artisans</p>
         </header>
 
         <div class="template-grid">
             <div class="template-card">
                 <span class="status-badge">Ready to Preview</span>
                 <h2>Classic Elegance</h2>
-                <p>Minimalist design with large hero images, perfect for traditional luxury brands.</p>
+                <p>Minimalist design with large hero images, perfect for traditional luxury brands. Features clean typography and sophisticated spacing.</p>
                 <a href="templates/template1-classic.html" class="btn">View Template</a>
             </div>
 
             <div class="template-card">
                 <span class="status-badge">Ready to Preview</span>
                 <h2>Modern Romantic</h2>
-                <p>Gallery-focused layout with enhanced testimonials, ideal for wedding florists.</p>
+                <p>Gallery-focused layout with enhanced testimonials, ideal for wedding florists. Includes immersive portfolio displays.</p>
                 <a href="templates/template2-romantic.html" class="btn">View Template</a>
             </div>
 
             <div class="template-card">
                 <span class="status-badge">Ready to Preview</span>
                 <h2>Luxury Editorial</h2>
-                <p>Blog-centric design with sophisticated typography for sharing floral stories.</p>
+                <p>Blog-centric design with sophisticated typography for sharing floral stories and showcasing your artistic process.</p>
                 <a href="templates/template3-editorial.html" class="btn">View Template</a>
             </div>
 
             <div class="template-card">
                 <span class="status-badge">Ready to Preview</span>
                 <h2>Boutique Studio</h2>
-                <p>Service packages and booking focus for client-centered businesses.</p>
+                <p>Service packages and booking focus for client-centered businesses. Features an integrated consultation system.</p>
                 <a href="templates/template4-boutique.html" class="btn">View Template</a>
             </div>
 
             <div class="template-card">
                 <span class="status-badge">Ready to Preview</span>
                 <h2>Artisan Portfolio</h2>
-                <p>Showcase-style with immersive imagery for artistic floral designers.</p>
+                <p>Showcase-style with immersive imagery for artistic floral designers. Perfect for highlighting your signature work.</p>
                 <a href="templates/template5-artisan.html" class="btn">View Template</a>
             </div>
         </div>
